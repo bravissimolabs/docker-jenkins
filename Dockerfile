@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get install -q -y git
 
 # Install latest version of docker
-RUN wget -qO- https://get.docker.com/ | sh
+RUN curl -sSL https://get.docker.com/ | sh
 
 # Clean up after ourselves
 RUN apt-get clean
