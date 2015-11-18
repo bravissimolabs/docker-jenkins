@@ -7,13 +7,15 @@ RUN apt-get update && \
     apt-get install -q -y git
 
 # Install latest version of docker
-RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
-    echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list && \
-    apt-get update && \
-    apt-get install -q -y docker-engine
+RUN wget -qO- https://get.docker.com/ | sh
+
+# RUN apt-key adv --keyserver hkp://pgp.mit.edu:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D && \
+#     echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list && \
+#     apt-get update && \
+#     apt-get install -q -y docker-engine
 
 # Clean up after ourselves
-RUN apt-get clean
+# RUN apt-get clean
 
 # Download and configure Jenkins
 ADD http://mirrors.jenkins-ci.org/war/latest/jenkins.war /opt/jenkins.war

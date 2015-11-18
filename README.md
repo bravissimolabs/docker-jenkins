@@ -1,6 +1,6 @@
 # docker-jenkins
 
-Jenkins dockerfile.  
+Dockerfile for Jenkins.
 
-Last update: Mon 2 Nov 2015  
-Docker version: 1.8.3
+Last update: Wed 18 Nov 2015  
+Docker version: 1.9.0
