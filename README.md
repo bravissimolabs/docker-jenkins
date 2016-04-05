@@ -2,5 +2,5 @@
 
 Dockerfile for Jenkins.
 
-Last update: Wed 18 Nov 2015  
-Docker version: 1.9.0
+Last update: Tue 05 April 2016  
+Docker version: 1.10.3
